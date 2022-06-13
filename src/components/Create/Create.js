@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { usersCon } from '../../App';
 import './Create.css'
 
 const Create = () => {
     let [users, setUsers] = useContext(usersCon)
-    console.log(typeof users);
+    console.log(users);
+    let navigate = useNavigate()
 
     let [id, setId] = useState('')
     console.log(id);
@@ -30,6 +31,7 @@ const Create = () => {
         setUsers([...users,
         { id: id, username: username, email: email }
         ])
+        navigate('/')
     }
     return (
         <div className='container'>
@@ -53,9 +55,10 @@ const Create = () => {
                     </Form.Text>
                 </Form.Group>
 
-                <Link to='/'><Button variant="dark" type="submit" >
+                <Button variant="dark" type="submit">
                     Add User
-                </Button></Link>
+                </Button>
+
             </Form>
         </div>
     );

@@ -9,6 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
     let [users, setUsers] = useContext(usersCon)
+    console.log(users);
     let navigate = useNavigate()
     let handleCreate = () => {
         navigate('/create')
