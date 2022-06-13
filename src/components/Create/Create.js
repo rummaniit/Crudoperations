@@ -27,9 +27,9 @@ const Create = () => {
     let addUser = (e) => {
         e.preventDefault()
         console.log('sub');
-        setUsers([...users, [
-            { id: id, username: username, email: email }
-        ],])
+        setUsers([...users,
+        { id: id, username: username, email: email }
+        ])
     }
     return (
         <div className='container'>
