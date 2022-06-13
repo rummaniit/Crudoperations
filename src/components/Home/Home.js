@@ -54,7 +54,7 @@ const Home = () => {
                             <td >
                                 <Link to={`/delete/${user.id}`}><Button className='m-2' variant="danger">Delete</Button></Link>
                                 <Link to={`/read/${user.id}`}><Button className='m-2' variant="warning" >Read</Button></Link>
-                                <Button className='m-2' variant="success">Edit</Button>{' '}
+                                <Link to={`/edit/${user.id}`}><Button className='m-2' variant="success">Edit</Button></Link>
                             </td>
                         </tr>
                     </tbody>)

@@ -7,6 +7,7 @@ import { createContext, useEffect, useState } from 'react';
 import Delete from './components/Delete/Delete';
 import Read from './components/Read/Read';
 import Create from './components/Create/Create';
+import Edit from './components/Edit/Edit';
 
 export let usersCon = createContext('usr')
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path='/home' element={<Home></Home>}></Route>
             <Route path='/delete/:userid' element={<Delete></Delete>}></Route>
             <Route path='/read/:readid' element={<Read></Read>}></Route>
+            <Route path='/edit/:editid' element={<Edit></Edit>}></Route>
             <Route path='/create' element={<Create></Create>}></Route>
           </Routes>
         </BrowserRouter>
